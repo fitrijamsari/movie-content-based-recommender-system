@@ -8,7 +8,7 @@ This project is just a personal sample project to get the knowledge of building 
 
 For this project, I will try to use the CONTENT-BASED RECOMMENDATION SYSTEM approach.
 
-### Content-Based Filtering:
+## Introduction:
 
 Content-based filtering recommends items similar to those a user has liked or interacted with in the past, based on the characteristics of the items themselves. (e.g., tags, genre, actors, directors, description).
 
@@ -32,10 +32,27 @@ Weaknesses:
 - May suffer from the "filter bubble" problem, where recommendations are overly similar to the user's existing preferences.
 - Requires a good understanding of item features and user preferences, which can be challenging to obtain.
 
-**Technologies Used:**
+## Technologies Used/Methodology:
 
 - Combine movie_title and genre as one features.
 - Convert text to vector using TFIDF method.
 - Using Cosine Similarity to calculate the similarity score given movie_title.
 - Filter top 5 score of similar movies.
 - Implement on Streamlit for testing.
+
+## How to Run:
+
+1. Run all the [research jupyter notebook](https://github.com/fitrijamsari/movie-content-based-recommender-system/tree/main/research) code to generate pickle files of:
+
+- movie_list.pkl
+- similarities.pkl
+
+Both files will be stored in "model" folder. similarities.pkl files will be produced with estimated of 700MB+ size.
+
+2. Run the application on streamlit:
+
+```bash
+streamlit run app.py
+```
+
+3. Use the dropdown to select any movies. 5 list of recommended movies will be appear after selection.
